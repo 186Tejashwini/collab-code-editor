@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Editor } from "@monaco-editor/react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: "100vh", width: "100%" }}>
+      <h2 style={{ textAlign: "center" }}>🚀 Collaborative Code Editor (Demo)</h2>
+      
+      <Editor
+        height="90vh"
+        defaultLanguage="javascript"
+        defaultValue="// Start typing your code here..."
+        theme="vs-dark"
+      />
     </div>
   );
 }
